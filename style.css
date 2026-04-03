@@ -1,0 +1,294 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: rgb(36, 36, 36);
+    color: white;
+    text-align: center;
+    font-family: "Audiowide", sans-serif;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth; /* Płynne przeskakiwanie z menu */
+}
+section {
+    min-width: 100%;
+    min-height: 100vh; /* Kluczowy parametr */
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: start; /* Przyciąganie przy przewijaniu */
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+h1, h3{
+    font-weight: normal;
+}
+header{
+    padding: 20px auto;
+    justify-content: center;
+}
+header button{
+    margin-top: 20px;
+    padding: 5px 10px;
+    border: none;
+    background-color: transparent;
+    color: white;
+    font-size: 16px;
+    transition: 0.3s;
+    border-radius: 20px;
+}
+header button:hover{
+    background-color: rgb(45, 129, 255);
+    transition: 0.3s;
+}
+main{
+    margin-top: 50px;
+    font-family: "Audiowide", sans-serif;
+    font-style: normal;
+    margin: auto;
+    width: 100%;
+}
+main img{
+    width: 180px;
+    border-radius: 100%;
+    margin: auto;
+    margin-bottom: 20px;
+    transition: 0.3s;
+}
+main img:hover{
+    transform: scale(1.1);
+    transition: 0.3s;
+    box-shadow: 0 0 30px rgb(45, 129, 255);
+}
+#name{
+    font-size: 35px;
+}
+#baner{
+    font-style: italic;
+    font-size: 13px;
+}
+main button {
+    color: aliceblue;
+    /* Tworzymy szerszy gradient zawierający oba stany (kolor A -> B -> A) */
+    background: linear-gradient(to right, rgb(57, 136, 255), blue, rgb(57, 136, 255));
+    background-size: 200% auto; /* Tło musi być szersze niż przycisk */
+    background-position: right center; /* Startujemy z lewej strony */
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 50px;
+    border: none;
+    padding: 15px 20px;
+    margin: 20px;
+    cursor: pointer;
+    transition: 0.3s; /* To obsłuży zarówno scale, jak i background-position */
+}
+main button:hover {
+    transform: scale(1.1);
+    /* Przesuwamy tło na prawą stronę, co daje efekt odwrócenia kolorów */
+    background-position: left center;
+    box-shadow: 0 0 15px rgb(33, 122, 255);
+}
+section div{
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+section h1{
+    font-size: 40px;
+}
+section p{
+    font-size: 16px;
+    max-width: 80%;
+    margin: 20px auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+.kafelki{
+    margin-top: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+.kafelki img{
+    width: 100px;
+}
+.kafelki div{
+    background: rgba(36, 36, 36, 0.1);
+    backdrop-filter: blur(6px);
+    border: 2px dashed black;
+    border-radius: 30px;
+    max-width: 300px;
+    flex: 1 1 250px;
+    height: auto;
+    margin: auto;
+    padding: 50px 20px;
+    transition: 0.4s;
+}
+.kafelki div:hover{
+    transition: 0.4s;
+    transform: scale(1.1);
+    background-color: rgba(36, 36, 36, 0.6);
+    box-shadow: 10px 15px 30px rgb(45, 129, 255);
+}
+.cards{
+    display: flex;
+    gap: 50px;
+    max-width: 80%;
+    flex-wrap: wrap;
+}
+.card{
+    width: 300px;
+    min-height: 400px;
+    border: 1px dashed black;
+    border-radius: 15px;
+    padding: 50px 10px;
+    background-color: rgba(36, 36, 36, 0.3);
+    backdrop-filter: blur(3px);
+    transition: 0.3s;
+    margin-top: 0;
+}
+.card:hover{
+    border: 3px solid rgba(45, 129, 255, 0.5);
+    box-shadow: 5px 5px 25px rgba(15, 255, 107, 0.8);
+    background-color: rgba(36, 36, 36, 0.6);
+    border-radius: 60px;
+    backdrop-filter: blur(10px);
+    transform: scale(1.05);
+    transition: 0.3s;
+}
+.card img{
+    width: 100px;
+}
+.info{
+    background-color: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(13px) saturate(130%);
+    border-radius: 50px;
+    position: relative;
+    z-index: 2;
+    max-width: 95%;
+    margin: auto;
+    margin-top: 100vh;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    min-height: 100vh;
+    
+}
+.hero{
+    padding-top: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+}
+.card2{
+    max-width: 300px;
+    max-height: 300px;
+    border: 2px solid red;
+    font-size: 15px;
+    margin: auto;
+    padding: 20px;
+    background-color: rgba(36, 36, 36, 0.1);
+    border: 1px dashed black;
+    transition: 0.3s;
+}
+.card2:hover{
+    transform: scale(1.1);
+    transition: 0.3s;
+    border-radius: 40px;
+    background-color: rgba(36, 36, 36, 0.6);
+}
+.card2 img{
+    width: 80px;
+}
+.card2 ul{
+    text-align: left;
+    padding: 0 60px;
+}
+.form{
+    min-height: 30vh;
+}
+.form h1{
+    margin-bottom: 50px;
+}
+.form form{
+    padding: 20px 30px;
+}
+.form input, .form textarea{
+    margin: 0 auto 20px;
+    padding: 5px 10px;
+    width: 250px;
+    font-size: 16px;
+    text-align: center;
+    border: none;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: black;
+    transition: 0.3s;
+}
+.form textarea{
+    min-width: 90%;
+    min-height: 100px;
+}
+.form input:hover, .form textarea:hover, .form input:focus, .form textarea:focus{
+    transform: scale(1.1);
+    transition: 0.3s;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+.form button{
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 15px;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1), blue, rgb(57, 136, 255));
+    background-size: 300% auto;
+    background-position: center right;
+    color: white;
+    transition: 0.3s;
+}
+.form button:hover{
+    transition: 0.3s;
+    transform: scale(1.2);
+    background-position: center left;
+}
+footer nav button{
+    margin-top: 20px;
+    padding: 5px 10px;
+    border: none;
+    background-color: transparent;
+    color: white;
+    font-size: 16px;
+    transition: 0.3s;
+    border-radius: 20px;
+}
+footer button:hover{
+    background-color: rgb(45, 129, 255);
+    transition: 0.3s;
+}
+.cv{
+    min-width: 15%;
+    height: 60px;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 15px;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0.1), red, rgba(255, 0, 0, 0.1));
+    background-size: 200% auto;
+    background-position: center right;
+    color: white;
+    transition: 0.3s;
+}
+.cv:hover{
+    transition: 0.3s;
+    transform: scale(1.2);
+    background-position: center left;
+}
+.cv img{
+    width: 20px;
+}
